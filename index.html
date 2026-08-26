@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ירון בוסקילה — הנדסת תוכנה וסוכני AI</title>
+<meta name="description" content="ירון בוסקילה — 21 שנות הנדסת תוכנה, ארכיטקטורת מערכות וסוכני AI. אפיון לפני בנייה, גם מול מודל.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ירון בוסקילה — הנדסת תוכנה וסוכני AI">
+<meta property="og:description" content="21 שנות הנדסת תוכנה. אותה שיטה, מול סוכני AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ---- פלטה: design.md, החלטה 2. ארבעה ערכים בלבד. ---- */
+  :root{
+    --navy:   #1B2A56;
+    --accent: #3B6FD4;
+    --ink:    #1A1D24;
+    --bg:     #F5F7FA;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Assistant","Heebo","Segoe UI",Arial,sans-serif;
+    font-size:18px;
+    line-height:1.75;
+    font-weight:400;
+  }
+  img{display:block;max-width:100%}
+  p{margin:0 0 1.25rem}
+  p:last-child{margin-bottom:0}
+  strong{font-weight:700}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  section{padding:clamp(64px,10vw,120px) 0}
+
+  h1,h2{margin:0;line-height:1.25;font-weight:700;color:var(--navy)}
+
+  h2{
+    font-size:clamp(1.35rem,3.4vw,1.75rem);
+    margin-bottom:2.25rem;
+    padding-bottom:.75rem;
+    border-bottom:1px solid var(--navy);
+  }
+
+  /* ================= הירו ================= */
+  /* רקע מפורש + isolation — כדי ש-multiply של התמונה יקבל משטח לְמַזֵּג אליו */
+  .hero{padding-top:clamp(48px,7vw,88px);background:var(--bg);isolation:isolate}
+  .hero .wrap{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:clamp(32px,5vw,64px);
+  }
+  .hero__text{flex:1 1 340px;min-width:0;max-width:54ch}
+  .eyebrow{margin:0 0 18px;line-height:1.35}
+  .eyebrow b{display:block;font-size:1.05rem;font-weight:700;color:var(--navy);letter-spacing:.01em}
+  .eyebrow span{display:block;font-size:.9rem;font-weight:400;color:#5A6478;margin-top:2px}
+
+  h1{font-size:clamp(2.1rem,6.6vw,3.75rem);letter-spacing:-.01em}
+  .tagline{
+    margin:1.5rem 0 0;
+    font-size:clamp(1.05rem,2.6vw,1.3rem);
+    font-weight:600;
+    color:var(--ink);
+  }
+
+  /* התמונה אטומה ורקעה לבן — multiply ממזג אותו ברקע הדף בלי להוסיף צבע */
+
+  /* ================= מי אני ================= */
+  .prose{max-width:64ch}
+
+  /* ================= הכירו את יתרו ================= */
+  .dark{background:var(--navy);color:var(--bg)}
+  .dark h2{color:var(--bg);border-bottom-color:var(--bg)}
+  .meet{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    gap:clamp(28px,5vw,56px);
+  }
+  .meet__text{flex:1 1 340px;min-width:0;max-width:64ch}
+  .portrait{
+    position:relative;
+    flex:0 0 auto;
+    width:clamp(160px,26vw,240px);
+    aspect-ratio:1/1;
+    border-radius:50%;
+    overflow:hidden;
+    background:var(--bg);
+    isolation:isolate;
+  }
+  .portrait img{
+    position:absolute;
+    top:-4.6%;
+    left:-69%;
+    width:238%;
+    height:auto;
+    max-width:none;
+    mix-blend-mode:multiply;
+  }
+
+  /* ================= מה בניתי ================= */
+  .built-item{
+    max-width:64ch;
+    border-inline-start:3px solid var(--accent);
+    padding-inline-start:20px;
+  }
+
+  /* ================= כתבו לי ================= */
+  .contact h2{border-bottom:0;padding-bottom:0;margin-bottom:1.5rem}
+  .mail{
+    display:inline-block;
+    background:var(--accent);
+    color:var(--bg);
+    text-decoration:none;
+    font-weight:600;
+    font-size:clamp(1rem,2.6vw,1.15rem);
+    padding:14px 28px;
+    border-radius:6px;
+    direction:ltr;
+    unicode-bidi:isolate;
+  }
+  .mail:hover,.mail:focus-visible{background:var(--navy)}
+
+  /* ==== האנימציה היחידה בדף: חשיפת הכותרת הראשית ====
+     מקור: Per Word Crossfade / 21st.dev (@educalvolpz) — הועבר ל-CSS/JS
+     תוך שמירת הפרמטרים: 700ms, cubic-bezier(.16,1,.3,1), stagger 90ms. */
+  .reveal-word{display:inline-block;white-space:pre}
+  .reveal-on .reveal-word{
+    opacity:0;
+    transform:translateY(8px);
+    transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);
+    transition-delay:var(--d,0ms);
+  }
+  .reveal-on.is-in .reveal-word{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal-on .reveal-word{opacity:1;transform:none;transition:none}
+  }
+
+  @media (max-width:760px){
+    body{font-size:17px}
+    /* בעמודה, flex-basis הוא גובה — מאפסים אותו כדי שלא ייווצר רווח מת */
+    .hero .wrap{flex-direction:column;flex-wrap:nowrap;align-items:stretch}
+    .hero__text{order:1;flex:0 0 auto}
+      .meet{flex-direction:column;flex-wrap:nowrap;align-items:center}
+    .meet__text{flex:0 0 auto}
+    .portrait{order:-1}
+  }
+</style>
+</head>
+<body>
+
+<main>
+
+  <!-- בלוק 1 -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__text">
+        <p class="eyebrow"><b>ירון בוסקילה</b><span>מהנדס תוכנה · בונה סוכני AI</span></p>
+        <h1 data-reveal>אני כותב אפיון גם למודל.</h1>
+        <p class="tagline">21 שנות הנדסת תוכנה. אותה שיטה, מול סוכני AI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- בלוק 2 -->
+  <section>
+    <div class="wrap">
+      <div class="prose">
+        <p><strong>מ-2017 אני כותב ומוביל מערכת לתיעוד הנדסי בארגון גדול.</strong> המערכת גדלה עם השנים, והובלתי בה פירוק מתמשך: חילצתי חמישה שירותים עצמאיים, ובאזורים שלא ניתן היה לחלץ הקטנתי תלויות בתוך הקוד. אני זה שהגדיר אילו אזורים כבר אסור לגעת בהם. בניתי והובלתי צוות בדיקות, ובאפיון אני לא רק מקבל דרישות — אני עוזר ללקוח לנסח אותן.</p>
+        <p><strong>בערבים אני מלמד ילדים עם ליקויי למידה.</strong> משם מגיע החזון שאני בונה אליו: מערכת שמכינה למורה מערכי שיעור. לא כדי ש-AI ילמד את הילד — כדי שלמורה יישאר זמן ללמד.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- בלוק 3 -->
+  <section class="dark">
+    <div class="wrap">
+      <h2>הכירו את יתרו</h2>
+      <div class="meet">
+        <div class="portrait">
+          <img src="assets/agent-front.png" alt="יתרו" width="1024" height="1536">
+        </div>
+        <div class="meet__text">
+          <p>זה <strong>יתרו</strong>. קראתי לו על שם היועץ שראה את משה קורס תחת העומס ובנה לו מבנה — לא עשה את העבודה במקומו.</p>
+          <p>בניתי אותו בקורס טירונות סוכנים של אִימפּרוּב: מיפוי, מסמכי ידע, system prompt, אריזה כפלאגין. הידע שלו מפוצל לשישה סקילים לפי מתי הוא נדרש — חלק נטען בכל שיחה, וחלק רק כשהמשימה נוגעת בתחום.</p>
+          <p>וההוראה שהכי חשובה לי בו: <strong>לא לרצות אותי, ולא לאשר לי שאני צודק.</strong> ביקשתי ממנו אמת, לא תמיכה.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- סקשן משני -->
+  <section>
+    <div class="wrap">
+      <h2>מה בניתי</h2>
+      <div class="built-item">
+        <p><strong>יתרו</strong> — עוזר אישי שעוזר לי לתכנן, לתעדף ולפרק החלטות. ארוז כפלאגין, מותקן ועובד.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- בלוק 4 -->
+  <section class="contact">
+    <div class="wrap">
+      <h2>כתבו לי.</h2>
+      <a class="mail" href="mailto:ybuskila@gmail.com">ybuskila@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  var el = document.querySelector('[data-reveal]');
+  if (!el) return;
+
+  var DELAY = 150;    // השהיה לפני תחילת החשיפה
+  var STAGGER = 90;   // מרווח בין מילה למילה
+
+  var text = el.textContent.trim();
+  var words = text.split(' ');
+
+  el.setAttribute('aria-label', text);
+  el.textContent = '';
+
+  words.forEach(function (word, i) {
+    var span = document.createElement('span');
+    span.className = 'reveal-word';
+    span.setAttribute('aria-hidden', 'true');
+    span.style.setProperty('--d', (DELAY + i * STAGGER) + 'ms');
+    span.textContent = word;
+    el.appendChild(span);
+    if (i < words.length - 1) {
+      var gap = document.createElement('span');
+      gap.className = 'reveal-word';
+      gap.setAttribute('aria-hidden', 'true');
+      gap.textContent = ' ';
+      el.appendChild(gap);
+    }
+  });
+
+  el.classList.add('reveal-on');
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      el.classList.add('is-in');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
