@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מדיניות פרטיות — ירון בוסקילה</title>
+<meta name="description" content="מדיניות פרטיות לאוטומציות האישיות של ירון בוסקילה, כולל השימוש ב-Google Drive API.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:   #1B2A56;
+    --accent: #3B6FD4;
+    --ink:    #1A1D24;
+    --bg:     #F5F7FA;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Assistant","Heebo","Segoe UI",Arial,sans-serif;
+    font-size:18px;
+    line-height:1.75;
+    font-weight:400;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  header{background:var(--navy);color:#fff;padding:48px 0 40px;margin-bottom:48px}
+  header h1{margin:0 0 8px;font-size:1.9rem;line-height:1.3;font-weight:700}
+  header p{margin:0;opacity:.85;font-size:1rem}
+  main{padding-bottom:72px}
+  h2{
+    font-size:1.25rem;font-weight:700;color:var(--navy);
+    margin:40px 0 12px;line-height:1.4;
+  }
+  h2:first-of-type{margin-top:0}
+  p{margin:0 0 1.1rem}
+  ul{margin:0 0 1.1rem;padding-inline-start:1.4rem}
+  li{margin-bottom:.5rem}
+  strong{font-weight:700}
+  a{color:var(--accent)}
+  .note{
+    border-inline-start:4px solid var(--accent);
+    background:#fff;
+    padding:16px 20px;
+    margin:0 0 1.1rem;
+  }
+  footer{
+    border-top:1px solid #dfe4ec;
+    padding:24px 0 0;
+    margin-top:48px;
+    font-size:.92rem;
+    opacity:.75;
+  }
+  @media (max-width:600px){
+    body{font-size:17px}
+    header{padding:36px 0 30px;margin-bottom:36px}
+    header h1{font-size:1.55rem}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>מדיניות פרטיות</h1>
+    <p>עודכן לאחרונה: 9 בספטמבר 2026</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <h2>על מה המסמך הזה חל</h2>
+    <p>המסמך חל על <strong>האוטומציות האישיות</strong> שאני, ירון בוסקילה, בונה ומריץ לשימושי שלי. כרגע מדובר באוטומציה אחת בשם <strong>שמעון</strong>, שמתמללת הקלטות של שיעורים שאני משתתף בהם.</p>
+    <div class="note">
+      <p style="margin:0"><strong>יש משתמש אחד בלבד — אני.</strong> האוטומציות אינן שירות, אינן פתוחות לציבור, ואין להן משתמשים נוספים. הן ניגשות רק לחשבון Google שלי עצמי.</p>
+    </div>
+
+    <h2>לאילו נתונים ניגשת האוטומציה</h2>
+    <p>שמעון משתמש בהרשאת <strong>Google Drive במצב קריאה בלבד</strong> (<code>drive.readonly</code>), כדי לקרוא קובצי הקלטה מתיקייה מסוימת בדרייב שלי.</p>
+    <ul>
+      <li><strong>קריאה בלבד</strong> — האוטומציה אינה כותבת, אינה משנה ואינה מוחקת דבר בדרייב.</li>
+      <li>היא ניגשת לקובצי ההקלטה שאני מכוון אליהם, ולמידע הבסיסי על הקבצים (שם, תאריך, סוג).</li>
+      <li>היא אינה סורקת את הדרייב ואינה אוספת קבצים שאינם קשורים לתמלול.</li>
+    </ul>
+
+    <h2>מה נעשה בנתונים</h2>
+    <ul>
+      <li>קובץ ההקלטה יורד למחשב האישי שלי או לשרת פרטי שבשליטתי.</li>
+      <li>ההקלטה נשלחת ל-<strong>OpenAI</strong> לצורך תמלול (מודל <code>whisper-1</code>), והטקסט שהתקבל נשלח לחילוץ תובנות (מודל <code>gpt-4o</code>).</li>
+      <li>התמלול והתובנות נשמרים אצלי — במאגר קוד פרטי ובמחשב האישי.</li>
+    </ul>
+    <p>OpenAI הוא ספק העיבוד היחיד שאליו נשלח תוכן. אין ספקים נוספים.</p>
+
+    <h2>מה <em>לא</em> נעשה בנתונים</h2>
+    <ul>
+      <li>המידע <strong>אינו נמכר</strong> ואינו מושכר לאף גורם.</li>
+      <li>המידע <strong>אינו משותף</strong> עם צדדים שלישיים מעבר לספק העיבוד שצוין למעלה.</li>
+      <li>אין פרסום, אין פרופיילינג, ואין כלי אנליטיקה.</li>
+      <li>המידע אינו משמש לאימון מודלים.</li>
+    </ul>
+
+    <h2>שימוש מוגבל — Limited Use</h2>
+    <p>השימוש שלי במידע שמתקבל מממשקי Google, וההעברה שלו, עומדים ב-<a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">מדיניות הנתונים של Google API Services</a>, לרבות דרישות ה-<strong>Limited Use</strong>.</p>
+
+    <h2>שמירה ומחיקה</h2>
+    <p>התמלולים נשמרים אצלי כל עוד הם משמשים אותי, ואני מוחק אותם כשאינם נחוצים. אפשר לבטל את ההרשאה של האפליקציה לדרייב בכל רגע בעמוד <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">ההרשאות של חשבון Google</a> — ביטול ההרשאה עוצר מיידית כל גישה עתידית.</p>
+
+    <h2>אבטחה</h2>
+    <p>מפתחות הגישה נשמרים כמשתני סביבה ואינם נכללים בקוד המקור. הגישה מוגבלת להרשאה המינימלית הנדרשת — קריאה בלבד.</p>
+
+    <h2>יצירת קשר</h2>
+    <p>לשאלות בנוגע למדיניות הזו: <a href="mailto:ybuskila@gmail.com">ybuskila@gmail.com</a></p>
+
+    <footer>
+      <p style="margin:0"><a href="/">חזרה לדף הבית</a></p>
+    </footer>
+
+  </div>
+</main>
+
+</body>
+</html>
