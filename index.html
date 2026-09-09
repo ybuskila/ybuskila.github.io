@@ -154,6 +154,14 @@
     .meet__text{flex:0 0 auto}
     .portrait{order:-1}
   }
+
+  /* ---- פוטר: נושא את שם האפליקציה כפי שהוא רשום ב-Google OAuth,
+         ואת הקישור למדיניות הפרטיות. שניהם נדרשים לאימות המיתוג. ---- */
+  .sitefoot{background:var(--navy);color:var(--bg);padding:40px 0;font-size:.95rem}
+  .sitefoot p{margin:0 0 .6rem}
+  .sitefoot p:last-child{margin-bottom:0}
+  .sitefoot .appname{display:inline-block;font-weight:700;direction:ltr;unicode-bidi:isolate}
+  .sitefoot a{color:var(--bg)}
 </style>
 </head>
 <body>
@@ -217,6 +225,13 @@
   </section>
 
 </main>
+
+<footer class="sitefoot">
+  <div class="wrap">
+    <p><span class="appname">Yaron Buskila Automations</span> — האוטומציות האישיות שאני בונה ומריץ לעצמי. ביניהן שמעון, שמתמלל לי הקלטות של שיעורים.</p>
+    <p><a href="privacy.html">מדיניות פרטיות</a></p>
+  </div>
+</footer>
 
 <script>
 (function () {
