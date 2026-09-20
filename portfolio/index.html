@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ירון בוסקילה - מה שבניתי</title>
+<meta name="description" content="בונה סוכנים ואוטומציות שרצות בפועל. כאן כל מה שכבר עובד.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="av-companion" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="23" fill="var(--clay-weak)"/>
+    <circle cx="21" cy="19" r="7.5" fill="var(--clay)"/>
+    <path d="M8.5 40c1.6-7.4 6.7-11.5 12.5-11.5S32 32.6 33.5 40z" fill="var(--clay)"/>
+    <path d="M31 10h9a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-3l-4 3.5V21h-2a3 3 0 0 1-3-3v-5a3 3 0 0 1 3-3z"
+          fill="none" stroke="var(--clay)" stroke-width="2.2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="av-process" viewBox="0 0 48 48">
+    <rect x="1" y="1" width="46" height="46" rx="8" fill="var(--accent-weak)"/>
+    <rect x="12" y="14" width="24" height="21" rx="4" fill="var(--navy)"/>
+    <circle cx="19" cy="23" r="2.6" fill="var(--surface)"/>
+    <circle cx="29" cy="23" r="2.6" fill="var(--surface)"/>
+    <path d="M18 30h12" stroke="var(--surface)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M24 6v6M6 24h5M37 24h5" stroke="var(--navy)" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="24" cy="5" r="2.4" fill="var(--navy)"/>
+  </symbol>
+  <symbol id="av-skill" viewBox="0 0 48 48">
+    <rect x="1" y="1" width="46" height="46" rx="8" fill="var(--accent-weak)"/>
+    <path d="M16 20h16v7a8 8 0 0 1-8 8 8 8 0 0 1-8-8z" fill="var(--accent)"/>
+    <path d="M20 20v-7M28 20v-7" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M24 35v5" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="av-code" viewBox="0 0 48 48">
+    <rect x="1" y="1" width="46" height="46" rx="8" fill="#E1E7F0"/>
+    <rect x="9" y="12" width="30" height="24" rx="3" fill="none" stroke="var(--ink-soft)" stroke-width="2.4"/>
+    <path d="M9 19h30" stroke="var(--ink-soft)" stroke-width="2.4"/>
+    <path d="M21 25l-3 3 3 3M27 25l3 3-3 3" fill="none" stroke="var(--ink-soft)" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</defs></svg>
+
+<div class="wrap">
+<header>
+  <h1>ירון בוסקילה</h1>
+  <p class="tagline">בונה סוכנים ואוטומציות שרצות בפועל. כאן כל מה שכבר עובד.</p>
+  <div class="head-links">
+    <a href="https://ybuskila.github.io/">מי אני &#8592; הדף האישי</a>
+    <a class="mail" href="mailto:ybuskila@gmail.com">שליחת מייל</a>
+    <span class="mail-text"><span dir="ltr" style="unicode-bidi:isolate">ybuskila@gmail.com</span></span>
+  </div>
+</header>
+
+<main>
+  <section class="system" id="grace-hopper">
+    <details>
+      <summary>
+        <div class="row">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-process"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h2 class="title">גרייס הופר</h2>
+              <button class="type-label" type="button" popovertarget="def-system" aria-label="מערכת - מה זה?">מערכת</button><span class="date"><span dir="ltr" style="unicode-bidi:isolate">18.09.2026</span></span>
+            </div>
+            <p class="purpose">שבקשת עדכון לא תמתין לאדם היחיד שמחזיק את הלוגיקה בראשו, ויושב ובונה שאילתה לכל בקשה</p>
+            <p class="proof"><b>15 מתוך 15 תרחישים עברו, חמישה סקילים</b></p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b>גרייס הופר היא מערכת</b>. גרייס הופר - החזית שמדברת עם משתמשי מרכז השירות, מפרשת בקשה חופשית ומפעילה את הכלים שלה.</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">EquipmentBriefing</span> · <span dir="ltr" style="unicode-bidi:isolate">grace-sandbox-api</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">TechnicianAvailability</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">TechnicianAvailability</span> הוא סקיל</b>. התמחות נכנסת - <span dir="ltr" style="unicode-bidi:isolate">mechanical</span>, <span dir="ltr" style="unicode-bidi:isolate">electrical</span>, <span dir="ltr" style="unicode-bidi:isolate">software</span> או <span dir="ltr" style="unicode-bidi:isolate">calibration</span> - ואיתה אזור אם ידוע, ויוצאים המועמדים לשיבוץ: מי מתאים, מי פנוי כרגע, כמה קריאות פתוחות יש על כל אחד, ואילו חלופות קיימות באזורים אחרים או בהתמחויות אחרות.</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.1.0</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">ServiceQueue</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">ServiceQueue</span> הוא סקיל</b>. תור הקריאות: מה פתוח עכשיו על פני כל הלקוחות, לפי סטטוס, חומרה, לקוח או טווח תאריכים.</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0.0</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">PartStock</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">PartStock</span> הוא סקיל</b>. שאלה ישירה על חלק חילוף: מק&quot;ט נכנס ומצב המלאי יוצא - כמה יש, וכמה ימים לוקחת אספקה.</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0.0</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">OpenServiceCall</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">OpenServiceCall</span> הוא סקיל</b>. פעולת הכתיבה היחידה: פתיחת קריאת שירות חדשה על פריט ציוד, בשם המשתמש המחובר.</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0.1</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-code"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">grace-sandbox-api</span></h3>
+              <button class="type-label" type="button" popovertarget="def-code" aria-label="פרויקט קוד - מה זה?">פרויקט קוד</button>
+            </div>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">grace-sandbox-api</span> הוא פרויקט קוד</b>. סימולטור של מרכז שירות ותחזוקת ציוד, שגרייס נבנית ונבחנת מולו. סבב הקריאה סגור, שכבת הכתיבה נפתחה, ובקשת המשתמש קיימת. עשר פעולות קריאה + עשר פעולות כתיבה + <span dir="ltr" style="unicode-bidi:isolate">endpoints</span> תפעוליים (איפוס, מצב מלא, מסך).</dd>
+        <dt>התוצר</dt><dd>שרת <span dir="ltr" style="unicode-bidi:isolate">API</span> מקומי עם נתונים ותרחישים מושתלים</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">FastAPI</span></dd>
+        <dt>משמש את</dt><dd><span dir="ltr" style="unicode-bidi:isolate">EquipmentBriefing</span> · גרייס הופר</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">EquipmentBriefing</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">EquipmentBriefing</span> הוא סקיל</b>. שם נכנס — לקוח, אתר, דגם או מזהה ציוד — ותדריך ציוד אחד יוצא: כל קריאות השירות, כל הטיפולים, וזיהוי של חלק חילוף שהוחלף יותר מפעם אחת, כולל בדיקה אם הוא בכלל זמין במלאי.</dd>
+        <dt>התוצר</dt><dd>תדריך ציוד</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">grace-sandbox-api</span></dd>
+        <dt>משמש את</dt><dd>מיועד לגרייס הופר</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0.0</span></dd>
+      </dl>
+      </div>
+    </details>
+  </section>
+
+  <section class="system" id="baruch">
+    <details>
+      <summary>
+        <div class="row">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-process"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h2 class="title">ברוך</h2>
+              <button class="type-label" type="button" popovertarget="def-process" aria-label="סוכן תהליך - מה זה?">סוכן תהליך</button><span class="date"><span dir="ltr" style="unicode-bidi:isolate">15.09.2026</span></span>
+            </div>
+            <p class="purpose">שמסמכים רשמיים לא ילכו לאיבוד בתיבה, ושהתיבה תישאר נקייה בלי שאצטרך לזכור לטפל בה</p>
+            <p class="proof"><b>3 שנים של מיילים: 117 קבצים נשמרו, 113 מיילים לפח, 0 תקלות</b></p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b>ברוך הוא סוכן תהליך</b>. שולף מיילים משולחים רשמיים (חשמל, גז, עירייה, מים, ביטוח), שומר את הקבצים המצורפים בדרייב - תיקייה לכל מקור - ומעביר לפח רק מייל שכל הקבצים שלו אומתו בדיסק.</dd>
+        <dt>התוצר</dt><dd>קבצים בדרייב לפי מקור ושנה · דוח <span dir="ltr" style="unicode-bidi:isolate">HTML</span> במייל · שורת לוג</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">SaveAttachments</span> · <span dir="ltr" style="unicode-bidi:isolate">TrashMail</span> · <span dir="ltr" style="unicode-bidi:isolate">SendEmail</span></dd>
+        <dt>משמש את</dt><dd>בסיס לתבנית ברוך</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.1</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">TrashMail</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+            <p class="purpose">שמחיקה תהיה פעולה נפרדת והפיכה, שקורית רק אחרי שמי שקורא לה וידא שמותר</p>
+            <p class="proof"><b>113 מיילים הועברו לפח בהרצה של ברוך, 0 תקלות</b></p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">TrashMail</span> הוא סקיל</b>. מקבל מזהה מייל (<span dir="ltr" style="unicode-bidi:isolate">Gmail message id</span>) ומעביר אותו לפח.</dd>
+        <dt>התוצר</dt><dd>מייל בפח (30 יום לשחזור)</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">Gmail API</span> (הרשאת שינוי)</dd>
+        <dt>משמש את</dt><dd>ברוך</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0.1</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">SendEmail</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+            <p class="purpose">ששליחת דוחות תהיה פעולה עם הרשאת שליחה בלבד, כך שבאג לא יפגע בתיבה</p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">SendEmail</span> הוא סקיל</b>. שולח מייל <span dir="ltr" style="unicode-bidi:isolate">HTML</span> לנמען נתון, מהתיבה של המשתמש.</dd>
+        <dt>התוצר</dt><dd>מייל שנשלח</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">Gmail API</span> (שליחה בלבד)</dd>
+        <dt>משמש את</dt><dd>ברוך</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0.1</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">SaveAttachments</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+            <p class="purpose">ששמירת קבצים ממייל תהיה פעולה אחת עם הרשאת קריאה בלבד</p>
+            <p class="proof"><b>56 קבצים מ-38 מיילים נשמרו ואומתו</b></p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">SaveAttachments</span> הוא סקיל</b>. מקבל מזהה מייל (<span dir="ltr" style="unicode-bidi:isolate">Gmail message id</span>) ונתיב תיקייה, ושומר שם את הקבצים המצורפים שעוברים את כללי הקובץ (סוג, גודל).</dd>
+        <dt>התוצר</dt><dd>לכל קובץ: נתיב, גודל ומצב (נשמר / קיים / נכשל)</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">Gmail API</span> (קריאה בלבד)</dd>
+        <dt>משמש את</dt><dd>ברוך</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">2.0.1</span></dd>
+      </dl>
+      </div>
+    </details>
+  </section>
+
+  <section class="system" id="trigger-page">
+    <details>
+      <summary>
+        <div class="row">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-code"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h2 class="title">דף הטריגרים</h2>
+              <button class="type-label" type="button" popovertarget="def-code" aria-label="פרויקט קוד - מה זה?">פרויקט קוד</button><span class="date"><span dir="ltr" style="unicode-bidi:isolate">07.09.2026</span></span>
+            </div>
+            <p class="purpose">להפעיל אוטומציות בלחיצה ולראות את הפלט, גם אחרי שהטרמינל נסגר</p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b>דף הטריגרים הוא פרויקט קוד</b>. לוח בקרה מקומי: כפתור לכל אוטומציה, והפלט נשאר על המסך גם אחרי סגירת הדף.</dd>
+        <dt>התוצר</dt><dd>ממשק <span dir="ltr" style="unicode-bidi:isolate">web</span> מקומי שמריץ תהליכים ומציג את הפלט</dd>
+        <dt>משתמש ב</dt><dd>פייתון סטנדרטי בלבד, בלי תלויות</dd>
+        <dt>משמש את</dt><dd>מפעיל את שמעון ואת אריזת יתרו</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-process"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title">שמעון התמלילן</h3>
+              <button class="type-label" type="button" popovertarget="def-process" aria-label="סוכן תהליך - מה זה?">סוכן תהליך</button>
+            </div>
+            <p class="purpose">שמה שנאמר בשיעור יגיע לידע של יתרו, בלי שאסכם ביד</p>
+            <p class="proof"><b>הקלטה של 207 דקות (<span dir="ltr" style="unicode-bidi:isolate">124MB</span>) ← תמלול ← ידע חדש אצל יתרו</b></p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b>שמעון התמלילן הוא סוכן תהליך</b>. סוכן תהליך. מתמלל את הקלטות הקורס &quot;טירונות סוכנים&quot; ומזין את התובנות לתוך מסמכי הידע של יתרו — הסוכן האישי של ירון.</dd>
+        <dt>התוצר</dt><dd>תמלול לכל שיעור · תוספות לשלושה ממסמכי הידע של יתרו</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">AudioTranscriber</span> · <span dir="ltr" style="unicode-bidi:isolate">Google Drive</span> · <span dir="ltr" style="unicode-bidi:isolate">OpenAI</span></dd>
+        <dt>משמש את</dt><dd>מזין את יתרו · מופעל מדף הטריגרים</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.2</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-process"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title">אריזת יתרו (<span dir="ltr" style="unicode-bidi:isolate">rebuild</span>)</h3>
+              <button class="type-label" type="button" popovertarget="def-process" aria-label="סוכן תהליך - מה זה?">סוכן תהליך</button>
+            </div>
+            <p class="purpose">שהידע שערכתי יגיע באמת ליתרו המותקן</p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b>אריזת יתרו (<span dir="ltr" style="unicode-bidi:isolate">rebuild</span>) הוא סוכן תהליך</b>. <span dir="ltr" style="unicode-bidi:isolate">Rebuild Plugin</span> — אורז סוכן מתיקיית המקור לקובץ <span dir="ltr" style="unicode-bidi:isolate">zip</span> מוכן להתקנה.</dd>
+        <dt>התוצר</dt><dd>קובץ <span dir="ltr" style="unicode-bidi:isolate">zip</span> ב-<span dir="ltr" style="unicode-bidi:isolate">plugins-to-install/</span></dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">tools/build-plugin.py</span></dd>
+        <dt>משמש את</dt><dd>יתרו · מופעל מדף הטריגרים</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0</span></dd>
+        <dt>מופיע גם תחת</dt><dd>יתרו</dd>
+      </dl>
+      </div>
+    </details>
+  </section>
+
+  <section class="system" id="shimon">
+    <details>
+      <summary>
+        <div class="row">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-process"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h2 class="title">שמעון התמלילן</h2>
+              <button class="type-label" type="button" popovertarget="def-process" aria-label="סוכן תהליך - מה זה?">סוכן תהליך</button><span class="date"><span dir="ltr" style="unicode-bidi:isolate">07.09.2026</span></span>
+            </div>
+            <p class="purpose">שמה שנאמר בשיעור יגיע לידע של יתרו, בלי שאסכם ביד</p>
+            <p class="proof"><b>הקלטה של 207 דקות (<span dir="ltr" style="unicode-bidi:isolate">124MB</span>) ← תמלול ← ידע חדש אצל יתרו</b></p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b>שמעון התמלילן הוא סוכן תהליך</b>. סוכן תהליך. מתמלל את הקלטות הקורס &quot;טירונות סוכנים&quot; ומזין את התובנות לתוך מסמכי הידע של יתרו — הסוכן האישי של ירון.</dd>
+        <dt>התוצר</dt><dd>תמלול לכל שיעור · תוספות לשלושה ממסמכי הידע של יתרו</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">AudioTranscriber</span> · <span dir="ltr" style="unicode-bidi:isolate">Google Drive</span> · <span dir="ltr" style="unicode-bidi:isolate">OpenAI</span></dd>
+        <dt>משמש את</dt><dd>מזין את יתרו · מופעל מדף הטריגרים</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.2</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">AudioTranscriber</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+            <p class="purpose">שתמלול יהיה יכולת אחת שכל תהליך יכול להשתמש בה, ולא קוד שחי בתוך שמעון</p>
+            <p class="proof"><b>קובץ של <span dir="ltr" style="unicode-bidi:isolate">124MB</span> נחתך ל-21 קטעים ותומלל</b></p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">AudioTranscriber</span> הוא סקיל</b>. מתמלל כל קובץ אודיו לטקסט באמצעות <span dir="ltr" style="unicode-bidi:isolate">Whisper</span> של <span dir="ltr" style="unicode-bidi:isolate">OpenAI.</span></dd>
+        <dt>התוצר</dt><dd>טקסט</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">OpenAI Whisper</span> · <span dir="ltr" style="unicode-bidi:isolate">ffmpeg</span></dd>
+        <dt>משמש את</dt><dd>שמעון התמלילן</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0.0</span></dd>
+      </dl>
+      </div>
+    </details>
+  </section>
+
+  <section class="system" id="yitro">
+    <details>
+      <summary>
+        <div class="row">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-companion"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h2 class="title">יתרו</h2>
+              <button class="type-label" type="button" popovertarget="def-companion" aria-label="סוכן שותף - מה זה?">סוכן שותף</button><span class="date"><span dir="ltr" style="unicode-bidi:isolate">25.08.2026</span></span>
+            </div>
+            <p class="purpose">עוזר שמכיר אותי ואת הקורס, בלי שאצטרך להסביר מחדש בכל שיחה</p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b>יתרו הוא סוכן שותף</b>. יתרו — העוזר האישי של ירון. מכיר אותו, את הידע שלו ואת הדרך שבה הוא עובד.</dd>
+        <dt>התוצר</dt><dd>תשובות מותאמות אישית; פלאגין מותקן בקלוד</dd>
+        <dt>משתמש ב</dt><dd>6 סקילי ידע פנימיים (<span dir="ltr" style="unicode-bidi:isolate">yitro</span>, <span dir="ltr" style="unicode-bidi:isolate">goals</span>, <span dir="ltr" style="unicode-bidi:isolate">assets</span>, <span dir="ltr" style="unicode-bidi:isolate">tools</span>, <span dir="ltr" style="unicode-bidi:isolate">course</span>, <span dir="ltr" style="unicode-bidi:isolate">audience</span>) · <span dir="ltr" style="unicode-bidi:isolate">PromptCoach</span> · אריזת יתרו (<span dir="ltr" style="unicode-bidi:isolate">rebuild</span>)</dd>
+        <dt>משמש את</dt><dd>מוזן על ידי שמעון התמלילן</dd>
+        <dt>איפה רץ</dt><dd>שניהם</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.4.6</span> בריפו · <span dir="ltr" style="unicode-bidi:isolate">1.4.5</span> במשרד</dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-skill"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title"><span dir="ltr" style="unicode-bidi:isolate">PromptCoach</span></h3>
+              <button class="type-label" type="button" popovertarget="def-skill" aria-label="סקיל - מה זה?">סקיל</button>
+            </div>
+            <p class="purpose">שאלמד לכתוב פרומפטים טובים יותר, ולא רק אקבל פרומפט מתוקן</p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b><span dir="ltr" style="unicode-bidi:isolate">PromptCoach</span> הוא סקיל</b>. משפר פרומפט קיים בדו-שיח קצר: בודק אם יש פער בין מה שהפרומפט מבקש לבין מה שהמשתמש צריך, שואל שאלה אחת, מחזיר לפני/אחרי ומסביר את השינוי המרכזי כדי שהמשתמש ילמד.</dd>
+        <dt>התוצר</dt><dd>פרומפט משופר · שורה בספריית הפרומפטים בנושן</dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">Notion</span></dd>
+        <dt>משמש את</dt><dd>יתרו</dd>
+        <dt>איפה רץ</dt><dd>שניהם</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">0.2</span></dd>
+      </dl>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <div class="row component">
+          <span class="chev" aria-hidden="true">&#9664;</span>
+          <svg class="mark small" viewBox="0 0 48 48" aria-hidden="true"><use href="#av-process"/></svg>
+          <div class="grow">
+            <div class="title-line">
+              <h3 class="title">אריזת יתרו (<span dir="ltr" style="unicode-bidi:isolate">rebuild</span>)</h3>
+              <button class="type-label" type="button" popovertarget="def-process" aria-label="סוכן תהליך - מה זה?">סוכן תהליך</button>
+            </div>
+            <p class="purpose">שהידע שערכתי יגיע באמת ליתרו המותקן</p>
+          </div>
+        </div>
+      </summary>
+      <div class="detail">
+      <dl>
+        <dt>מה זה</dt><dd><b>אריזת יתרו (<span dir="ltr" style="unicode-bidi:isolate">rebuild</span>) הוא סוכן תהליך</b>. <span dir="ltr" style="unicode-bidi:isolate">Rebuild Plugin</span> — אורז סוכן מתיקיית המקור לקובץ <span dir="ltr" style="unicode-bidi:isolate">zip</span> מוכן להתקנה.</dd>
+        <dt>התוצר</dt><dd>קובץ <span dir="ltr" style="unicode-bidi:isolate">zip</span> ב-<span dir="ltr" style="unicode-bidi:isolate">plugins-to-install/</span></dd>
+        <dt>משתמש ב</dt><dd><span dir="ltr" style="unicode-bidi:isolate">tools/build-plugin.py</span></dd>
+        <dt>משמש את</dt><dd>יתרו · מופעל מדף הטריגרים</dd>
+        <dt>איפה רץ</dt><dd>מחשב מקומי</dd>
+        <dt>גרסה</dt><dd><span dir="ltr" style="unicode-bidi:isolate">1.0</span></dd>
+        <dt>מופיע גם תחת</dt><dd>דף הטריגרים</dd>
+      </dl>
+      </div>
+    </details>
+  </section>
+</main>
+
+<div popover id="def-companion" class="definition"><b>סוכן שותף</b><p>שותף שיחה ועבודה, עם שם ואופי. אין לו משימה אחת - יש לו תחום.</p></div>
+<div popover id="def-process" class="definition"><b>סוכן תהליך</b><p>קלט ← עיבוד ← פלט. משימה אחת ברורה, אותו תהליך בכל פעם.</p></div>
+<div popover id="def-skill" class="definition"><b>סקיל</b><p>יכולת אחת ממוקדת, שסוכנים ותהליכים קוראים לה.</p></div>
+<div popover id="def-code" class="definition"><b>פרויקט קוד</b><p>קוד שאינו סוכן, אינו אוטומציה ואינו מערכת - דף, שירות או <span dir="ltr" style="unicode-bidi:isolate">API.</span></p></div>
+<div popover id="def-system" class="definition"><b>מערכת</b><p>חזית של סוכן שותף מעל מנועי תהליך.</p></div>
+
+<footer>
+  <p><a class="mail" href="mailto:ybuskila@gmail.com">שליחת מייל</a> <span class="mail-text"><span dir="ltr" style="unicode-bidi:isolate">ybuskila@gmail.com</span></span></p>
+  <p class="updated">עודכן לאחרונה <span dir="ltr" style="unicode-bidi:isolate">20.09.2026</span></p>
+</footer>
+</div>
+</body>
+</html>
