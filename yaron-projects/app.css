@@ -107,6 +107,15 @@ aside dd { margin: 0; }
 .enter .btn { display: block; text-align: center; }
 .enter p { margin: 8px 0 0; font-size: 13px; color: var(--ink-soft); }
 .enter p.flush { margin: 0; }
+.enter [hidden] { display: none !important; }
+.enter.checking > * { visibility: hidden; }
+.enter .start-btn { margin-top: 8px; width: 100%; }
+.enter .open-btn { margin-top: 0; }
+.parts { list-style: none; margin: 8px 0 0; padding: 0; font-size: 13px; }
+.part-state { font-weight: 600; }
+.part-state.starting { color: var(--running); }
+.part-state.up { color: var(--done); }
+.enter .start-fail { color: var(--failed); font-weight: 600; }
 
 section.s { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: var(--pad) 24px; }
 section.s + section.s { margin-top: 16px; }
