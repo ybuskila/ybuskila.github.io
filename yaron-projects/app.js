@@ -112,4 +112,32 @@
     if (open) input.focus(); else closeSearch(true);
   });
 
+  // --- סרטון בדף פריט: לא נטען עד לחיצה. בדיקת HEAD קטנה מוודאת שהקובץ קיים -
+  //     בלעדיה קובץ חסר היה מתגלה רק אחרי לחיצה על כפתור שלא עובד.
+  Array.prototype.forEach.call(document.querySelectorAll('.video-block'), function (block) {
+    var video = block.querySelector('video');
+    var play = block.querySelector('.play');
+    var err = block.querySelector('.video-err');
+    var details = block.querySelector('details');
+    function broken() { play.hidden = true; err.hidden = false; video.controls = false; }
+    // הבקרים של הדפדפן - רק בזמן ניגון. בלי JS הם נשארים (controls ב-HTML).
+    video.controls = false;
+    fetch(video.getAttribute('src'), { method: 'HEAD' })
+      .then(function (r) { if (r.ok) play.hidden = false; else broken(); })
+      .catch(broken);
+    play.addEventListener('click', function () {
+      play.hidden = true;
+      video.controls = true;
+      var p = video.play();
+      if (p && p.catch) p.catch(broken);
+    });
+    video.addEventListener('play', function () { play.hidden = true; video.controls = true; });
+    video.addEventListener('error', broken);
+    err.querySelector('a').addEventListener('click', function (e) {
+      e.preventDefault();
+      details.open = true;
+      details.querySelector('summary').focus();
+    });
+  });
+
 })();

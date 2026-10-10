@@ -95,6 +95,17 @@ a.kind:hover { border-color: var(--ink-soft); }
 .rows .meta { font-size: 13px; color: var(--ink-soft); white-space: nowrap; }
 
 .purpose { font-size: 19px; line-height: 1.5; margin: 16px 0 8px; max-width: 760px; }
+
+/* סרטון בדף פריט - בתוך מקטע section.s, עד 560 וצמוד לתחילת השורה (handoff, תיקון 10/10/2026). */
+.video-block { max-width: 560px; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; background: var(--console-bg); color: var(--console-ink); border-radius: var(--radius); overflow: hidden; }
+.video-frame video { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--console-bg); }
+.video-frame .play { position: absolute; inset-inline-start: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px; background: var(--surface); color: var(--navy); border: 0; border-radius: var(--radius); padding: 6px 14px; font-weight: 600; font-size: 15px; cursor: pointer; }
+.video-frame .play[hidden] { display: none; }
+.video-err { font-size: 15px; color: var(--ink-soft); margin: 8px 0 0; }
+.video-block details { margin-top: 8px; font-size: 15px; color: var(--ink-soft); }
+.video-block summary { cursor: pointer; color: var(--accent); }
+.video-block ol { margin: 8px 0 0; padding-inline-start: 20px; }
 .item { display: flex; gap: 32px; align-items: flex-start; margin-top: 16px; }
 .item .main { flex: 1; min-width: 0; }
 .side { width: var(--aside); flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; }
