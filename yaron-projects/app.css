@@ -164,6 +164,22 @@ p.missing { margin: 8px 0; margin-inline-start: 0; }
 .status .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
 .status.ok { color: var(--done); }
 .status.todo { color: var(--running); }
+a.status { text-decoration: none; }
+a.status[href]:hover { text-decoration: underline; }
+.status[hidden], .side dt[hidden], .side dd[hidden] { display: none; }
+/* הפעמון - חלונית חיוויים (עדכון אפיון 14/10/2026). בסגנון הפס: המונה כמו עיגול "ירון" */
+.bellwrap { position: relative; }
+.bell .count { position: absolute; top: 0; inset-inline-end: -2px; min-width: 16px; font-size: 11px; font-weight: 600; line-height: 16px; padding: 0 4px; border-radius: 8px; background: var(--surface); color: var(--navy); text-align: center; }
+.bell .count[hidden], .bellpanel[hidden] { display: none; }
+.bellpanel { position: absolute; top: 44px; inset-inline-end: 0; width: min(320px, calc(100vw - 32px)); background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: var(--radius); padding: 8px 0; z-index: 20; font-size: 13px; }
+.bellpanel h3 { font-size: 13px; font-weight: 600; margin: 0 16px 4px; color: var(--navy); }
+.bellpanel ul { list-style: none; margin: 0; padding: 0; }
+.bellpanel li a { display: block; padding: 8px 16px; color: var(--ink); text-decoration: none; }
+.bellpanel li a:hover, .bellpanel li a:focus-visible { background: var(--ground); }
+.bellpanel .t { color: var(--ink-soft); }
+.bellpanel .none { margin: 4px 16px 8px; color: var(--ink-soft); }
+.bellpanel .all { display: block; border-top: 1px solid var(--rule); margin-top: 4px; padding: 8px 16px 0; }
+.bellpanel :focus-visible { outline-color: var(--accent); }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; }
 .filters a { border: 1px dashed var(--ink-soft); border-radius: var(--radius); padding: 0 8px; color: var(--ink); text-decoration: none; }
 .filters a[aria-current="true"] { background: var(--ink); color: var(--surface); border-style: solid; }
@@ -190,6 +206,8 @@ code { font-family: var(--mono); font-size: 13px; }
   .search.open .search-input { display: block; position: absolute; inset-inline: 16px; top: 64px; width: auto; z-index: 11; background: var(--surface); color: var(--ink); border-color: var(--rule); }
   .search.open .search-input::placeholder { color: var(--ink-soft); }
   .search.open .results { inset-inline: 16px; top: 104px; width: auto; }
+  .bellwrap { position: static; }
+  .bellpanel { inset-inline: 16px; top: 64px; width: auto; }
   .crumbs { padding: 8px 16px; }
   main { padding: 24px 16px; }
   h1 { font-size: 24px; }
