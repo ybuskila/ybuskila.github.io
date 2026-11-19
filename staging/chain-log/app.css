@@ -1,0 +1,113 @@
+/* לוג השרשרת - פלטה ב, "דף שקט" (ירון, שער הצבעים 19/11/2026).
+   הטוקנים והרכיבים - ux-design.md שלב 7, ו-visual-foundation.html (בלי כלי ההדגמה). */
+:root {
+  --bg:#F5F3EE; --card:#FFFDF8; --soft:#EFEBE3; --line:#DDD8CE; --line-2:#CBC4B7; --divider:#ECE8E0;
+  --ink:#24211C; --ink-2:#4F493F; --ink-3:#655F56;
+  --bar:#F5F3EE; --on-bar:#24211C; --on-bar-2:#4F493F;
+  --primary:#3A352D; --on-primary:#FFFDF8; --focus:#3A352D;
+  --wait:#8A5A0E; --on-wait:#FFFDF8; --wait-bg:#F6EAD2; --wait-line:#A0702A;
+  --ok:#3F6A44; --ok-bg:#E6EEE3;
+  --again:#3D5A80; --again-bg:#E3E9F1;
+  --flag:#4F493F; --flag-bg:#EFEBE3; --flag-line:#9A9183;
+  --av-b:#E4E0D6; --av-b-ink:#3A352D; --av-m:#EEDFD8; --av-m-ink:#7A3B2A; --av-h:#DFE6DB; --av-h-ink:#3F5A3F;
+  --shadow:none;
+  --r:14px; --r-sm:10px; --font:'Heebo', system-ui, sans-serif; --mono:Consolas, 'Courier New', monospace;
+}
+
+* { box-sizing:border-box; }
+html, body { margin:0; }
+body { background:var(--bg); color:var(--ink); font:400 15px/1.6 var(--font); }
+button, select { font:inherit; color:inherit; }
+:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.sprite { position:absolute; width:0; height:0; overflow:hidden; }
+.ic { width:1em; height:1em; flex:none; vertical-align:-0.14em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.flip { transform:scaleX(-1); }
+.num { direction:ltr; unicode-bidi:isolate; font-variant-numeric:tabular-nums; }
+.bar { background:var(--bar); color:var(--on-bar); }
+.bar { border-bottom:1px solid var(--line); }
+.bar-in { max-width:1000px; margin:0 auto; padding:12px 24px; display:flex; flex-wrap:wrap; gap:2px 16px; align-items:baseline; }
+.bar h1 { font-size:19px; font-weight:800; margin:0; }
+.bar .run { font-size:15px; font-weight:600; color:var(--on-bar-2); }
+
+.app { max-width:1000px; margin:0 auto; padding:16px 24px 48px; }
+.meta { font-size:13px; color:var(--ink-3); margin:0 0 16px; display:flex; flex-wrap:wrap; gap:0 16px; }
+
+.waiting { background:var(--wait-bg); border:2px solid var(--wait-line); border-radius:var(--r); padding:12px 16px; margin-bottom:16px; display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; }
+.waiting .lbl { font-weight:700; display:inline-flex; gap:6px; align-items:center; font-size:15px; color:var(--on-wait); background:var(--wait); border-radius:999px; padding:2px 12px; }
+.waiting .what { flex:1 1 280px; color:var(--ink); }
+.btn { display:inline-flex; gap:6px; align-items:center; min-height:44px; padding:0 16px; border-radius:var(--r-sm); border:1px solid var(--line-2); background:var(--card); cursor:pointer; font-weight:600; font-size:15px; }
+.btn.primary { background:var(--primary); color:var(--on-primary); border-color:var(--primary); }
+.linkbtn { background:none; border:0; padding:0 4px; min-height:44px; cursor:pointer; text-decoration:underline; font-weight:600; color:var(--ink); }
+
+.controls { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:8px; }
+.tag { display:inline-flex; gap:6px; align-items:center; min-height:44px; padding:0 14px; border-radius:999px; border:1px solid var(--line-2); background:var(--card); cursor:pointer; font-size:14px; color:var(--ink-2); }
+.tag[aria-pressed="true"] { background:var(--primary); color:var(--on-primary); border-color:var(--primary); font-weight:600; }
+.controls label { display:inline-flex; gap:6px; align-items:center; font-size:14px; color:var(--ink-2); margin-inline-start:auto; }
+.controls select { min-height:44px; border:1px solid var(--line-2); border-radius:var(--r-sm); background:var(--card); padding:0 10px; font-size:16px; color:var(--ink); }
+.filtered { font-size:14px; color:var(--ink-2); margin-bottom:8px; display:flex; align-items:center; gap:4px; flex-wrap:wrap; }
+
+.day { font-size:13px; font-weight:600; color:var(--ink-3); margin:16px 0 8px; }
+
+/* תגי סוג: גלולה + אייקון + מילה. "פעולה" - בלי גלולה, כי היא הרוב */
+.type { display:inline-flex; gap:5px; align-items:center; font-size:13px; white-space:nowrap; color:var(--ink-3); }
+.chip { display:inline-flex; gap:5px; align-items:center; font-size:13px; font-weight:600; white-space:nowrap; border-radius:999px; padding:1px 10px; }
+.chip.wait { background:var(--wait-bg); color:var(--wait); }
+.chip.ok { background:var(--ok-bg); color:var(--ok); }
+.chip.again { background:var(--again-bg); color:var(--again); }
+.flag { display:inline-flex; gap:5px; align-items:center; font-size:13px; font-weight:600; color:var(--flag); background:var(--flag-bg); border:1px dashed var(--flag-line); border-radius:6px; padding:0 8px; }
+.open-mark { font-size:13px; font-weight:700; color:var(--on-wait); background:var(--wait); border-radius:999px; padding:1px 10px; }
+.rowno { color:var(--ink-3); font-size:13px; }
+.reason { color:var(--ink-2); font-size:14px; }
+.reason b { font-weight:600; }
+
+/* ציר: מקטע רשומות = כרטיס; שער = כרטיס משלו. השערים מחלקים את הריצה לפרקים */
+.seg { list-style:none; margin:0 0 12px; padding:0 16px; background:var(--card); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); }
+.ent { display:grid; grid-template-columns:32px 1fr; gap:0 12px; padding:10px 0; border-bottom:1px solid var(--divider); }
+.ent:last-child { border-bottom:0; }
+.av { width:32px; height:32px; border-radius:50%; font-weight:700; font-size:13px; display:grid; place-items:center; }
+.av.b { background:var(--av-b); color:var(--av-b-ink); } .av.m { background:var(--av-m); color:var(--av-m-ink); } .av.h { background:var(--av-h); color:var(--av-h-ink); }
+.av.x { background:var(--soft); color:var(--ink-2); }
+.ent .l1 { display:flex; flex-wrap:wrap; gap:2px 8px; align-items:baseline; }
+.ent .who { font-weight:600; }
+.ent .when { font-size:13px; color:var(--ink-3); }
+.ent .l1 .type, .ent .l1 .chip, .ent .l1 .flag { margin-inline-start:auto; }
+
+.gate { list-style:none; background:var(--card); border:1px solid var(--line-2); border-radius:var(--r); margin:0 0 12px; padding:12px 16px; box-shadow:var(--shadow); }
+.gate.is-open { border:2px solid var(--wait-line); }
+.gate .gh { display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center; }
+.gate .gh .when { font-size:13px; color:var(--ink-3); }
+.gate .gtxt { margin:4px 0 0; font-weight:600; }
+.gate .ans { margin-top:10px; padding-top:10px; border-top:1px solid var(--divider); display:flex; flex-wrap:wrap; gap:2px 10px; align-items:center; }
+.gate .ans .when { font-size:13px; color:var(--ink-3); }
+.gate .ans .txt { flex-basis:100%; }
+.gate .pending { margin-top:10px; padding-top:10px; border-top:1px dashed var(--wait-line); font-size:14px; font-weight:600; color:var(--wait); display:flex; gap:6px; align-items:center; }
+.target { outline:3px solid var(--focus); outline-offset:3px; }
+
+.state { background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:24px; color:var(--ink-2); box-shadow:var(--shadow); }
+.state p { margin:0 0 8px; }
+.state b { color:var(--ink); }
+.state code { font-family:var(--mono); font-size:13px; background:var(--soft); padding:2px 4px; border-radius:4px; }
+
+@media (max-width:767px) {
+  .bar-in { padding:10px 16px; }
+  .bar h1 { font-size:17px; }
+  .bar .run { font-size:14px; }
+  .app { padding:12px 16px 32px; }
+  .meta { margin-bottom:12px; }
+  .controls label { margin-inline-start:0; flex:1 1 120px; }
+  .controls label .lbl-txt { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+  .controls select { flex:1; min-width:0; }
+  .tag { padding:0 12px; }
+  .day { margin:12px 0 6px; }
+  .ent { padding:8px 0; }
+  .waiting { padding:10px 12px; justify-content:space-between; column-gap:8px; }
+  .waiting .lbl { padding:2px 10px; }
+  .waiting .what { order:3; flex-basis:100%; }
+  .seg { padding:0 12px; }
+  .gate { padding:10px 12px; }
+}
+
+/* תוספות לבנייה: מילים ארוכות בלוג נשברות ולא דוחפות את הרוחב; כמה סימונים בשורה אחת */
+.ent > div, .gate, .waiting .what { min-width:0; overflow-wrap:anywhere; }
+.flags { display:flex; flex-wrap:wrap; gap:4px; margin-top:4px; }
